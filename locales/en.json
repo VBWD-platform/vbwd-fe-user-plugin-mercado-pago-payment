@@ -1,0 +1,19 @@
+{
+  "mercadoPago": {
+    "payment": {
+      "creating": "Creating Mercado Pago preference…",
+      "redirecting": "Redirecting to Mercado Pago…",
+      "retry": "Try again"
+    },
+    "success": {
+      "title": "Payment received",
+      "message": "Your Mercado Pago payment has been confirmed.",
+      "dashboard": "Back to dashboard"
+    },
+    "cancel": {
+      "title": "Payment cancelled",
+      "message": "You cancelled the Mercado Pago checkout — no charge was made.",
+      "retry": "Try again"
+    }
+  }
+}

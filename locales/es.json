@@ -1,0 +1,19 @@
+{
+  "mercadoPago": {
+    "payment": {
+      "creating": "Creando preferencia Mercado Pago…",
+      "redirecting": "Redirigiendo a Mercado Pago…",
+      "retry": "Reintentar"
+    },
+    "success": {
+      "title": "Pago recibido",
+      "message": "Su pago Mercado Pago ha sido confirmado.",
+      "dashboard": "Volver al panel"
+    },
+    "cancel": {
+      "title": "Pago cancelado",
+      "message": "Canceló el pago — no se realizó ningún cargo.",
+      "retry": "Reintentar"
+    }
+  }
+}
