@@ -1,15 +1,27 @@
 <template>
   <div class="mp-payment">
-    <div v-if="loading" class="mp-payment__loading">
+    <div
+      v-if="loading"
+      class="mp-payment__loading"
+    >
       <p>{{ $t('mercadoPago.payment.creating') }}</p>
     </div>
-    <div v-else-if="error" class="mp-payment__error">
+    <div
+      v-else-if="error"
+      class="mp-payment__error"
+    >
       <p>{{ error }}</p>
-      <button class="btn btn-primary" @click="createPreference">
+      <button
+        class="btn btn-primary"
+        @click="createPreference"
+      >
         {{ $t('mercadoPago.payment.retry') }}
       </button>
     </div>
-    <div v-else-if="initPoint" class="mp-payment__redirect">
+    <div
+      v-else-if="initPoint"
+      class="mp-payment__redirect"
+    >
       <p>{{ $t('mercadoPago.payment.redirecting') }}</p>
     </div>
   </div>

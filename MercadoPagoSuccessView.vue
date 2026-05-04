@@ -2,7 +2,10 @@
   <div class="mp-success">
     <h2>{{ $t('mercadoPago.success.title') }}</h2>
     <p>{{ $t('mercadoPago.success.message') }}</p>
-    <router-link class="btn btn-primary" to="/dashboard">
+    <router-link
+      class="btn btn-primary"
+      to="/dashboard"
+    >
       {{ $t('mercadoPago.success.dashboard') }}
     </router-link>
   </div>
