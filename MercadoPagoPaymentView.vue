@@ -49,7 +49,7 @@ async function createPreference() {
   loading.value = true;
   error.value = null;
   try {
-    const resp = await api.post('/api/v1/plugins/mercado-pago/preferences', {
+    const resp = await api.post<Response>('/api/v1/plugins/mercado-pago/preferences', {
       invoice_no: invoiceNo,
       country,
       amount,
