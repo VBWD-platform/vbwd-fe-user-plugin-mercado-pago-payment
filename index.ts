@@ -5,7 +5,7 @@ import es from './locales/es.json';
 
 export const mercadoPagoPaymentPlugin: IPlugin = {
   name: 'mercado-pago-payment',
-  version: '26.6',
+  version: '26.6.1',
   description:
     'Mercado Pago LATAM — Pix, Boleto, OXXO, SPEI, PSE, Webpay, cards + installments',
   _active: false,
