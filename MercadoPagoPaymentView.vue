@@ -32,6 +32,14 @@ import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import { api } from '@/api';
 
+interface Preference {
+  init_point?: string;
+  sandbox_init_point?: string;
+}
+
+// Relative to the api client's `/api/v1` baseURL.
+const API_PREFIX = '/plugins/mercado-pago';
+
 const route = useRoute();
 const loading = ref(false);
 const error = ref<string | null>(null);
@@ -49,7 +57,7 @@ async function createPreference() {
   loading.value = true;
   error.value = null;
   try {
-    const resp = await api.post<Response>('/api/v1/plugins/mercado-pago/preferences', {
+    const body = await api.post<Preference>(`${API_PREFIX}/preferences`, {
       invoice_no: invoiceNo,
       country,
       amount,
@@ -61,8 +69,7 @@ async function createPreference() {
       return_url: `${window.location.origin}/pay/mercado-pago/success`,
       cancel_url: `${window.location.origin}/pay/mercado-pago/cancel`,
     });
-    const body = await resp.json();
-    initPoint.value = body.init_point || body.sandbox_init_point;
+    initPoint.value = body.init_point || body.sandbox_init_point || null;
     if (initPoint.value) {
       window.location.href = initPoint.value;
     } else {
